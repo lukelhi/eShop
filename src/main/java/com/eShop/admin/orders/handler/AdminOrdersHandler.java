@@ -30,4 +30,10 @@ public class AdminOrdersHandler {
         model.addAttribute("order",order);
         return "/admin/orders/view.jsp";
     }
+    @RequestMapping("/findOrderByExample")
+    public String findOrderByExample(Order order,Model model){
+        List<Order> orderByExample = adminOrdersService.findOrderByExample(order);
+        model.addAttribute("orders",orderByExample);
+        return "/admin/orders/list.jsp";
+    }
 }

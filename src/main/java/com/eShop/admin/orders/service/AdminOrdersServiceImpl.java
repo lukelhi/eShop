@@ -22,4 +22,9 @@ public class AdminOrdersServiceImpl implements AdminOrdersService{
     public Order findOrderById(String id) {
         return adminOrdersDao.selectOrderById(id);
     }
+
+    @Override
+    public List<Order> findOrderByExample(Order order) {
+        return adminOrdersDao.selectOrdersByExample(order);
+    }
 }

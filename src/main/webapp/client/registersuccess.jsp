@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>电子书城</title>
+	<title>eShop</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
 	<script type="text/javascript" src="js/my.js"></script>
 </head>

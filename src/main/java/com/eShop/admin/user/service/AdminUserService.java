@@ -1,0 +1,9 @@
+package com.eShop.admin.user.service;
+
+import com.eShop.commons.bean.User;
+
+import java.util.List;
+
+public interface AdminUserService {
+    List<User> findUsers();
+}

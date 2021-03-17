@@ -1,6 +1,7 @@
 package com.eShop.admin.orders.dao;
 
 import com.eShop.commons.bean.Order;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -9,4 +10,5 @@ import java.util.List;
 public interface AdminOrdersDao {
     List selectOrders();
     Order selectOrderById(String id);
+    List<Order> selectOrdersByExample(Order order);
 }

@@ -1,9 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <script type="text/javascript">
-function ini(){
-   document.form1.logonName.focus();
-}
+// function ini(){
+//    document.form1.logonName.focus();
+// }
 </script>
 
 <html>
@@ -33,10 +33,10 @@ function ini(){
 												<table border="0" align="center" cellpadding="2" cellspacing="0">
 													<tr align="center">
 														<td height="30" colspan="2" style="border-bottom: 1px dotted #cccccc">
-															<c:if test="${fail} == null">
-															<strong style="font-size: 14px;">请登录</strong>
+															<c:if test = "${empty fail}">
+															<strong style="font-size: 14px;">请输入用户名和密码</strong>
 															</c:if>
-															<c:if test="${fail} != null">
+															<c:if test = "${not empty fail}">
 																<strong style="font-size: 14px;">${fail}</strong>
 															</c:if>
 														</td>

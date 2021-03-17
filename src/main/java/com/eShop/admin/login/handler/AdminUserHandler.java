@@ -28,7 +28,7 @@ public class AdminUserHandler {
                 return "redirect:/admin/error/privilege.jsp";
             }
         }else{
-            model.addAttribute("fail","用户名和密码错误请重新输入！");
+            model.addAttribute("fail","用户名或密码错误！");
             return "/admin/login/login.jsp";
         }
     }

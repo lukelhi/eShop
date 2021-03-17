@@ -38,13 +38,13 @@ function changeImage() {
 </head>
 
 <body class="main">
-<!-- 1.网上书城顶部 start -->
+<!-- 1.网上eShop顶部 start -->
        <%@include file="head.jsp"%>
-<!-- 网上书城顶部  end -->
-<!--2. 网上书城菜单列表  start -->
+<!-- 网上eShop顶部  end -->
+<!--2. 网上eShop菜单列表  start -->
        <%@include file="menu_search.jsp" %>
-<!-- 网上书城菜单列表  end -->
-<!-- 3.网上书城用户注册  start -->
+<!-- 网上eShop菜单列表  end -->
+<!-- 3.网上eShop用户注册  start -->
 	<div id="divcontent">
 		<form action="${pageContext.request.contextPath}/client/user/register" method="post" onsubmit="return checkForm();">
 			<table width="850px" border="0" cellspacing="0">
@@ -140,9 +140,9 @@ function changeImage() {
 			</table>
 		</form>
 	</div>
- <!-- 网上书城用户注册  end -->
-<!--4. 网上书城下方显示 start -->
+ <!-- 网上eShop用户注册  end -->
+<!--4. 网上eShop下方显示 start -->
      <%@ include file="foot.jsp" %>
-<!-- 网上书城下方显示 start -->
+<!-- 网上eShop下方显示 start -->
 </body>
 </html>

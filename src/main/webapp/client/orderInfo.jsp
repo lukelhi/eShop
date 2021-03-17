@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>电子书城</title>
+<title>eShop</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/client/css/main.css" type="text/css" />
 </head>
 

@@ -7,4 +7,5 @@ import java.util.List;
 public interface AdminOrdersService {
     List findOrders();
     Order findOrderById(String id);
+    List<Order> findOrderByExample(Order order);
 }

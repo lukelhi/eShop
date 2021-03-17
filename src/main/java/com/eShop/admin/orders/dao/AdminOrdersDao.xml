@@ -3,28 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.eShop.admin.orders.dao.AdminOrdersDao">
-    <select id="selectOrders" resultType="Order">
+    <!--关联查询order对应的User-->
+    <resultMap id="OrderUserMap" type="Order">
+        <association property="user" select="selectUserById" column="user_id"/>
+    </resultMap>
+    <select id="selectOrders" resultMap="OrderUserMap">
         select * from orders
     </select>
-<!--    <select id="selectUserById" resultType="User">
-        select * from user where id=#{user_id}
-    </select>
-
-    <select id="selectProductById" resultType="Product">
-        select * from products where id=#{product_id}
-    </select>
-
-    <resultMap id="orderItemMap" type="OrderItem">
-        <association property="product" select="selectProductById" column="product_id"/>
-    </resultMap>
-    <select id="selectOrderItemsById" resultMap="orderItemMap">
-        select * from orderitem where order_id=#{id}
-    </select>
-    <resultMap id="orderMap" type="Order">
-        <association property="orderItems" select="selectOrderItemsById" column="id"/>
-        <association property="user" select="selectUserById" column="user_id"/>
-    </resultMap>-->
-
+    <!--根据id查询product-->
     <select id="selectProductById" resultType="Product">
         select * from products where id=#{product_id}
     </select>
@@ -38,7 +24,7 @@
     <select id="selectUserById" resultType="User">
         select * from user where id=#{user_id}
     </select>
-<!--    <select id=""-->
+
     <resultMap id="orderMap" type="Order">
         <result property="id" column="id"/>
         <association property="user" select="selectUserById" column="user_id"/>
@@ -49,4 +35,17 @@
         select * from orders where id=#{id}
     </select>
 
+
+    <!--根据条件按查找Order-->
+    <select id="selectOrdersByExample" resultMap="OrderUserMap">
+        select * from orders
+        <where>
+            <if test="id != null and id != ''">
+                id=#{id}
+            </if>
+            <if test="receiverName != null and receiverName != ''">
+                receiverName=#{receiverName}
+            </if>
+        </where>
+    </select>
 </mapper>

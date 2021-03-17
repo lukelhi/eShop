@@ -69,6 +69,14 @@ public class AdminProductHandler {
         adminProductService.addProduct(product);
         return "redirect:/admin/product/listProduct";
     }
+
+    /**
+     * 根据id查找Product
+     * 编辑之前的回显操作
+     * @param id
+     * @param model
+     * @return
+     */
     @RequestMapping("/findProductById")
     public String findProductById(String id,Model model){
         Product product = adminProductService.findProductById(id);

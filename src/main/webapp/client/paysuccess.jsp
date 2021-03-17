@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>电子书城</title>
+<title>eShop</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
 
 <script type="text/javascript" src="js/my.js">

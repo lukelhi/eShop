@@ -1,6 +1,7 @@
 package com.eShop.admin.notices.handler;
 
 import com.eShop.admin.notices.service.AdminNoticeService;
+import com.eShop.commons.bean.Notice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,5 +21,24 @@ public class AdminNoticeHandler {
         List notices = adminNoticeService.listNotice();
         model.addAttribute("notices",notices);
         return "/admin/notices/list.jsp";
+    }
+    /**
+     * 根据id查询notice
+     * 编辑公告的回显
+     * @param id
+     * @param model
+     * @return
+     */
+    @RequestMapping("/findNoticeById")
+    public String findNoticeById(String id,Model model){
+        Notice notice = adminNoticeService.selectNoticeById(id);
+        model.addAttribute("n",notice);
+        return "/admin/notices/edit.jsp";
+    }
+
+    @RequestMapping("/editNotice")
+    public String editProduct(Notice notice,Model model){
+        adminNoticeService.editNotice(notice);
+        return ListNotice(model);
     }
 }

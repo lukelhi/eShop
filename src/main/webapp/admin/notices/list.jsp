@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix='fmt' uri="http://java.sun.com/jsp/jstl/fmt" %>
 <HTML>
 <HEAD>
 <meta http-equiv="Content-Language" content="zh-cn">
@@ -54,9 +55,9 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${n.details }</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="8%">${n.n_time }</td>
+										width="8%"><fmt:formatDate value="${n.n_time }" pattern="yyyy-MM-dd"/></td>
 									<td align="center" style="HEIGHT: 22px" width="7%">
-										<a href="${pageContext.request.contextPath}/manager/FindByIdNoticeServlet?id=${n.n_id}">
+										<a href="${pageContext.request.contextPath}/admin/notice/findNoticeById?id=${n.n_id}">
 											<img src="${pageContext.request.contextPath}/admin/images/i_edit.gif" border="0" style="CURSOR: hand"> 
 										</a>
 									</td>

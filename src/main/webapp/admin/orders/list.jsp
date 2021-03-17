@@ -13,7 +13,7 @@
 <body>
 	<br>
 	<form id="Form1" name="Form1"
-		action="${pageContext.request.contextPath}/findOrderByManyCondition"
+		action="${pageContext.request.contextPath}/admin/order/findOrderByExample"
 		method="post">
 		<table cellSpacing="1" cellPadding="0" width="100%" align="center"
 			bgColor="#f5fafe" border="0">
@@ -50,7 +50,7 @@
 								<td align="right" bgColor="#ffffff" class="ta_01">
 									<button type="submit" id="search" name="search"
 										value="&#26597;&#35810;" class="button_view">
-										&#26597;&#35810;</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+										&#26597;&#35810;</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 									type="reset" name="reset" value="&#37325;&#32622;"
 									class="button_view" />
 								</td>
@@ -78,7 +78,7 @@
 								<td align="center" width="15%">地址</td>
 								<td align="center" width="10%">联系电话</td>
 								<td width="11%" align="center">总价</td>
-<%--								<td width="8%" align="center">所属用户</td>--%>
+								<td width="8%" align="center">所属用户</td>
 								<td width="10%" align="center">订单状态</td>
 								<td width="7%" align="center">查看</td>
 								<td width="7%" align="center">删除</td>
@@ -96,7 +96,7 @@
 										width="10%">${order.receiverPhone }</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center">
 										${order.money}</td>
-<%--									<td width="8%" align="center">${order.user.username}</td>--%>
+									<td width="8%" align="center">${order.user.username}</td>
 									<td width="10%" align="center">${order.paystate==0?"未支付":"已支付"}</td>
 
 									<td align="center" style="HEIGHT: 22px"><a

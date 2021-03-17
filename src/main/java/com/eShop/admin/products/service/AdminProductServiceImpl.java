@@ -6,13 +6,14 @@ import com.eShop.commons.bean.ProductList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Service
 public class AdminProductServiceImpl implements AdminProductService {
-    @Autowired
+    @Resource
     AdminProductDao adminProductDao;
     @Override
     public List<Product> findProduct() {

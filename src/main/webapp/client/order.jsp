@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>电子书城</title>
+<title>eShop</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/client/css/main.css" type="text/css" />
 
 <script type="text/javascript">
@@ -38,7 +38,7 @@
 								<td><table width="100%" border="0" cellspacing="0">
 										<tr>
 											<td><img src="images/buy2.gif" width="635" height="38" />
-												<p>你好，${user.username}！欢迎您来到网上书城结算中心</p>
+												<p>你好，${user.username}！欢迎您来到网上eShop结算中心</p>
 											</td>
 										</tr>
 										<tr>
