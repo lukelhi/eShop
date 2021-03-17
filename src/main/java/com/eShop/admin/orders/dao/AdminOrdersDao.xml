@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eShop.admin.orders.dao.AdminOrdersDao">
+    <select id="selectOrders" resultType="Order">
+        select * from orders
+    </select>
+<!--    <select id="selectUserById" resultType="User">
+        select * from user where id=#{user_id}
+    </select>
+
+    <select id="selectProductById" resultType="Product">
+        select * from products where id=#{product_id}
+    </select>
+
+    <resultMap id="orderItemMap" type="OrderItem">
+        <association property="product" select="selectProductById" column="product_id"/>
+    </resultMap>
+    <select id="selectOrderItemsById" resultMap="orderItemMap">
+        select * from orderitem where order_id=#{id}
+    </select>
+    <resultMap id="orderMap" type="Order">
+        <association property="orderItems" select="selectOrderItemsById" column="id"/>
+        <association property="user" select="selectUserById" column="user_id"/>
+    </resultMap>-->
+    <select id="selectUserById" resultType="User">
+        select * from user where id=#{user_id}
+    </select>
+    <select id="selectOrderItemsById" resultType="Product">
+        select * from products,orderitem where orderitem.order_id=#{id} and products.id=orderitem.product_id
+    </select>
+<!--    <select id=""-->
+    <resultMap id="orderMap" type="Order">
+        <result property="id" column="id"/>
+        <association property="user" select="selectUserById" column="user_id" javaType="User"/>
+        <collection property="orderItems" select="selectOrderItemsById" column="id" ofType="Product"/>
+    </resultMap>
+    <!--   根据id查找订单    -->
+    <select id="selectOrderById" resultMap="orderMap">
+        select * from orders where id=#{id}
+    </select>
+
+</mapper>

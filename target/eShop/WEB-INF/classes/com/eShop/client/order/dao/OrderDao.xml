@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eShop.client.order.dao.OrderDao">
+    <insert id="insertOrder">
+        insert into orders (id, money, receiverAddress, receiverName, receiverPhone, user_id)
+        values (#{id},#{money},#{receiverAddress},#{receiverName},#{receiverPhone},#{user.id})
+    </insert>
+    <insert id="insertItem">
+        insert into orderitem (order_id, product_id, buynum) values(#{order.id},#{product.id},#{buynum});
+    </insert>
+    <update id="updateProductNum">
+        update products set pnum=pnum-#{buynum} where id=#{product.id}
+    </update>
+    <update id="updatePayState">
+        update orders set paystate=1 where id=#{order_id}
+    </update>
+    <select id="selectUserById" resultType="User">
+        select * from user where id=#{user_id}
+    </select>
+    <resultMap id="selectUserById" type="Order">
+        <id property="id" column="id"/>
+        <association property="user" column="user_id" javaType="User" select="selectUserById"/>
+    </resultMap>
+    <select id="findOrderByUser" resultMap="selectUserById">
+        select * from orders where user_id=#{id}
+    </select>
+    <select id="selectOrderById" resultType="Order">
+        select * from orders where id=#{order_id}
+    </select>
+    <select id="selectProductById" resultType="Product">
+        select * from products where id=#{product_id}
+    </select>
+    <resultMap id="orderItemMap" type="OrderItem">
+        <association property="order" javaType="Order" select="selectOrderById" column="order_id"/>
+        <association property="product" javaType="Product" select="selectProductById" column="product_id"/>
+    </resultMap>
+    <select id="findOrderItemById" resultMap="orderItemMap">
+        select * from orderItem where order_id=#{id}
+    </select>
+</mapper>
