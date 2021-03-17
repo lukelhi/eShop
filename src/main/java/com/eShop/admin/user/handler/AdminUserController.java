@@ -21,4 +21,13 @@ public class AdminUserController {//防止bean重复
         model.addAttribute("users",users);
         return "/admin/user/list.jsp";
     }
+    /**
+     * 修改user时的回显
+     */
+    @RequestMapping("/findUserById")
+    public String findUserById(Integer id,Model model){
+        User userById = adminUserService.findUserById(id);
+        model.addAttribute("user",userById);
+        return "/admin/user/edit.jsp";
+    }
 }

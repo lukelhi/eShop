@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface AdminUsersDao {
     List<User> selectUsers();
+    User selectUserById(Integer id);
 }

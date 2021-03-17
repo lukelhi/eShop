@@ -15,4 +15,9 @@ public class AdminUserServiceImp implements AdminUserService { //AdminUserServic
     public List<User> findUsers() {
         return adminUsersDao.selectUsers();
     }
+
+    @Override
+    public User findUserById(Integer id) {
+        return adminUsersDao.selectUserById(id);
+    }
 }
