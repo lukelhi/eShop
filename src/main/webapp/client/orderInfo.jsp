@@ -21,7 +21,7 @@
 					<div style="text-align:right; margin:5px 10px 5px 0px">
 						<a href="${pageContext.request.contextPath }/index.jsp">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;
 						<a href="${pageContext.request.contextPath }/client/myAccount.jsp">我的账户</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;
-						<a href="${pageContext.request.contextPath }/findOrderByUser">订单查询</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;订单详细信息
+						<a href="${pageContext.request.contextPath }/client/order/findOrderByUser">订单查询</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;订单详细信息
 					</div>
 					<table cellspacing="0" class="infocontent">
 						<tr>
