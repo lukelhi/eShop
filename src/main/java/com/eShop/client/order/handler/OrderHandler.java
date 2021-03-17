@@ -62,7 +62,7 @@ public class OrderHandler {
         //订单名称，必填
         String subject = id;
         //商品描述，可空
-        String body = "";
+        String body = "商品描述";
 
         alipayRequest.setBizContent("{\"out_trade_no\":\""+ out_trade_no +"\","
                 + "\"total_amount\":\""+ total_amount +"\","

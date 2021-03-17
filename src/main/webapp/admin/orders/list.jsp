@@ -78,7 +78,7 @@
 								<td align="center" width="15%">地址</td>
 								<td align="center" width="10%">联系电话</td>
 								<td width="11%" align="center">总价</td>
-								<td width="8%" align="center">所属用户</td>
+<%--								<td width="8%" align="center">所属用户</td>--%>
 								<td width="10%" align="center">订单状态</td>
 								<td width="7%" align="center">查看</td>
 								<td width="7%" align="center">删除</td>
@@ -96,7 +96,7 @@
 										width="10%">${order.receiverPhone }</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center">
 										${order.money}</td>
-									<td width="8%" align="center">${order.user.username}</td>
+<%--									<td width="8%" align="center">${order.user.username}</td>--%>
 									<td width="10%" align="center">${order.paystate==0?"未支付":"已支付"}</td>
 
 									<td align="center" style="HEIGHT: 22px"><a

@@ -8,13 +8,15 @@ import com.eShop.commons.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
 @Service
 public class OrderServiceImpl implements OrderService {
-    @Autowired
+    @Resource
     OrderDao orderDao;
+
     @Override
     public void createOrder(Order order, Map<Product, Integer> cart) {
         //遍历购物车，并将其插入到订单条目

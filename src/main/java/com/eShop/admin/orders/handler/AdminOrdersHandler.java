@@ -12,6 +12,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin/order")
 public class AdminOrdersHandler {
+
     @Autowired
     AdminOrdersService adminOrdersService;
 
@@ -25,10 +26,8 @@ public class AdminOrdersHandler {
     @RequestMapping("/findOrderById")
     public String findOrderById(String id, Model model){
         Order order = adminOrdersService.findOrderById(id);
+        System.err.println(order);
         model.addAttribute("order",order);
         return "/admin/orders/view.jsp";
     }
-
-
-
 }

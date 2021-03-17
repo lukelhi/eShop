@@ -65,15 +65,15 @@
 							style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #eeeeee">
 							<td align="center" width="7%">${vs.count }</td>
 							<td width="8%" align="center"><img
-								src="${pageContext.request.contextPath}${item.imgurl}"
+								src="${pageContext.request.contextPath}${item.product.imgurl}"
 								width="50" height="50"></td>
 
-							<td align="center" width="18%">${item.id }</td>
-							<td align="center" width="10%">${item.name }</td>
-							<td align="center" width="10%">${item.price }</td>
-<%--							<td width="7%" align="center">${item.buynum }</td>--%>
-							<td width="7%" align="center">${item.category }</td>
-							<td width="31%" align="center">${item.description}</td>
+							<td align="center" width="18%">${item.product.id }</td>
+							<td align="center" width="10%">${item.product.name }</td>
+							<td align="center" width="10%">${item.product.price }</td>
+							<td width="7%" align="center">${item.buynum }</td>
+							<td width="7%" align="center">${item.product.category }</td>
+							<td width="31%" align="center">${item.product.description}</td>
 						</tr>
 					</c:forEach>
 

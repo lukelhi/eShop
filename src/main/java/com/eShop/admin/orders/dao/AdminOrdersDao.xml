@@ -24,17 +24,25 @@
         <association property="orderItems" select="selectOrderItemsById" column="id"/>
         <association property="user" select="selectUserById" column="user_id"/>
     </resultMap>-->
+
+    <select id="selectProductById" resultType="Product">
+        select * from products where id=#{product_id}
+    </select>
+    <resultMap id="OrderItemMap" type="OrderItem">
+        <result property="buynum" column="buynum"/>
+        <association property="product" column="product_id" select="selectProductById"/>
+    </resultMap>
+    <select id="selectOrderItemsById" resultMap="OrderItemMap">
+        select * from orderitem where order_id=#{id}
+    </select>
     <select id="selectUserById" resultType="User">
         select * from user where id=#{user_id}
-    </select>
-    <select id="selectOrderItemsById" resultType="Product">
-        select * from products,orderitem where orderitem.order_id=#{id} and products.id=orderitem.product_id
     </select>
 <!--    <select id=""-->
     <resultMap id="orderMap" type="Order">
         <result property="id" column="id"/>
-        <association property="user" select="selectUserById" column="user_id" javaType="User"/>
-        <collection property="orderItems" select="selectOrderItemsById" column="id" ofType="Product"/>
+        <association property="user" select="selectUserById" column="user_id"/>
+        <collection property="orderItems" select="selectOrderItemsById" column="id" ofType="OrderItem"/>
     </resultMap>
     <!--   根据id查找订单    -->
     <select id="selectOrderById" resultMap="orderMap">

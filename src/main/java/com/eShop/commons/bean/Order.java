@@ -12,7 +12,7 @@ public class Order {
     private int paystate;
     private Timestamp ordertime;
     private User user;
-    private List<Product> orderItems;//一个条目就是一个商品
+    private List<OrderItem> orderItems;//一个条目就是一个商品
 
     public List getOrderItems() {
         return orderItems;
