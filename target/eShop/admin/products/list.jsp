@@ -48,11 +48,11 @@
 										<option value="家用"<c:if test="${product.category == '家用'}">selected</c:if>>家用</option>
 										<option value="手机"<c:if test="${product.category == '手机'}">selected</c:if>>手机</option>
 
-<%--										<option value="少儿"<c:if test="${product.category == '少儿'}">selected</c:if>>少儿</option>--%>
+										<option value="少儿"<c:if test="${product.category == '少儿'}">selected</c:if>>少儿</option>
 <%--										<option value="艺术"<c:if test="${product.category == '艺术'}">selected</c:if>>艺术</option>--%>
 <%--										<option value="原版"<c:if test="${product.category == '原版'}">selected</c:if>>原版</option>--%>
 <%--										<option value="科技"<c:if test="${product.category == '科技'}">selected</c:if>>科技</option>--%>
-<%--										<option value="考试"<c:if test="${product.category == '考试'}">selected</c:if>>考试</option>--%>
+										<option value="考试"<c:if test="${product.category == '考试'}">selected</c:if>>考试</option>
 <%--										<option value="书籍百科"<c:if test="${product.category == '书籍百科'}">selected</c:if>>书籍百科</option>--%>
 								</select></td>
 							</tr>

@@ -52,11 +52,11 @@
 						<option value="文具">文具</option>
 						<option value="家用">家用</option>
 						<option value="手机">手机</option>
-<%--						<option value="少儿">少儿</option>--%>
+						<option value="少儿">少儿</option>
 <%--						<option value="艺术">艺术</option>--%>
 <%--						<option value="原版">原版</option>--%>
 <%--						<option value="科技">科技</option>--%>
-<%--						<option value="考试">考试</option>--%>
+						<option value="考试">考试</option>
 <%--						<option value="书籍百科">书籍百科</option>--%>
 				</select>
 				</td>

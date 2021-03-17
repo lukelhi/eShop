@@ -12,12 +12,9 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath }/client/js/autoplay.js"></script>
 </head>
 
-<body class="main">
+<body class="main" >
 	<%@include file="head.jsp"%>
 	<%@include file="menu_search.jsp" %>
-	<%-- <div id="divad">
-		<img src="${pageContext.request.contextPath}/client/ad/index_ad.jpg"/>
-	</div> --%>
 	
 	<!-- 商品商场首页轮播图  start -->
 	<div id="box_autoplay">

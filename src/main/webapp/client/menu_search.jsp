@@ -38,11 +38,11 @@ function search(){
 		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=文具">文具</a>
 		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=家用">家用</a>
 		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=手机">手机</a>
-<%--		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=少儿">少儿</a>--%>
+		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=少儿">少儿</a>
 <%--		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=艺术">艺术</a>--%>
 <%--		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=原版">原版</a>--%>
 <%--		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=科技">科技</a>--%>
-<%--		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=考试">考试</a>--%>
+		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=考试">考试</a>
 <%--		<a href="${pageContext.request.contextPath}/client/product/findProductByCategory?category=书籍百科">书籍百科</a>--%>
 		<a href="${pageContext.request.contextPath}/client/product/findProductByName" style="color:#FFFF00">全部商品目录</a>
 		

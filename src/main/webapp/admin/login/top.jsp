@@ -41,10 +41,10 @@ TH {
 </script>
 </HEAD>
 <body>
-	<table width="100%" height="70%" border="0" cellspacing="0"
+	<table width="50%" height="100%" border="0" cellspacing="0" align="center"
 		cellpadding="0">
 		<tr>
-			<td width="100%"
+			<td width="50% " align="center"
 				background="${pageContext.request.contextPath}/admin/images/top_11.png">
 			</td>
 		</tr>
