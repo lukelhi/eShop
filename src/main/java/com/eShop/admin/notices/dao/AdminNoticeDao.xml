@@ -24,4 +24,7 @@
     <insert id="insertNotice">
         insert into notice (title, details) values(#{title},#{details})
     </insert>
+    <delete id="deleteNotice">
+        delete from notice where n_id=#{id}
+    </delete>
 </mapper>

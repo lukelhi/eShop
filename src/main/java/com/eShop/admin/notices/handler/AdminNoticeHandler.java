@@ -59,4 +59,12 @@ public class AdminNoticeHandler {
         adminNoticeService.addNotice(notice);
         return ListNotice(model);
     }
+    /**
+     * 删除公告
+     */
+    @RequestMapping("/removeNotice")
+    public String removeProduct(Integer id,Model model){
+        adminNoticeService.removeNotice(id);
+        return ListNotice(model);
+    }
 }

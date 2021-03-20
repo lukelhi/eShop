@@ -9,4 +9,5 @@ public interface AdminNoticeService {
     Notice selectNoticeById(String notice_id);
     void editNotice(Notice notice);
     void addNotice(Notice notice);
+    void removeNotice(Integer id);
 }

@@ -10,4 +10,5 @@ public interface AdminNoticeDao {
     Notice selectNoticeById(String notice_id);
     void updateNotice(Notice notice);
     void insertNotice(Notice notice);
+    void deleteNotice(Integer id);
 }
