@@ -8,4 +8,5 @@ public interface AdminNoticeService {
     List listNotice();
     Notice selectNoticeById(String notice_id);
     void editNotice(Notice notice);
+    void addNotice(Notice notice);
 }

@@ -26,4 +26,9 @@ public class AdminNoticeServiceImpl implements AdminNoticeService {
     public void editNotice(Notice notice) {
         adminNoticeDao.updateNotice(notice);
     }
+
+    @Override
+    public void addNotice(Notice notice) {
+        adminNoticeDao.insertNotice(notice);
+    }
 }

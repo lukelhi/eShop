@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class AdminUserServiceImp implements AdminUserService { //AdminUserServiceImp 防止bean重复
+public class AdminUsersServiceImpl implements AdminUserService {
     @Resource
     AdminUsersDao adminUsersDao;
     @Override

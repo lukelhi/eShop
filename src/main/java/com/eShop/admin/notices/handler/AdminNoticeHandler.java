@@ -36,9 +36,27 @@ public class AdminNoticeHandler {
         return "/admin/notices/edit.jsp";
     }
 
+    /**
+     * 修改公告
+     * @param notice
+     * @param model
+     * @return
+     */
     @RequestMapping("/editNotice")
     public String editProduct(Notice notice,Model model){
         adminNoticeService.editNotice(notice);
+        return ListNotice(model);
+    }
+
+    /**
+     * 添加公告
+     * @param notice
+     * @param model
+     * @return
+     */
+    @RequestMapping("/addNotice")
+    public String addProduct(Notice notice,Model model){
+        adminNoticeService.addNotice(notice);
         return ListNotice(model);
     }
 }

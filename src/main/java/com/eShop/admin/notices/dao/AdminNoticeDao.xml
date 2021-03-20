@@ -21,4 +21,7 @@
         </set>
         where n_id=#{n_id}
     </update>
+    <insert id="insertNotice">
+        insert into notice (title, details) values(#{title},#{details})
+    </insert>
 </mapper>
