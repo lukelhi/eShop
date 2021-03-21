@@ -8,4 +8,5 @@ public interface AdminOrdersService {
     List findOrders();
     Order findOrderById(String id);
     List<Order> findOrderByExample(Order order);
+    void removeOrder(String id);
 }

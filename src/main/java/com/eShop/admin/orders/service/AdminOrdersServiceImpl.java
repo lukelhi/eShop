@@ -27,4 +27,9 @@ public class AdminOrdersServiceImpl implements AdminOrdersService{
     public List<Order> findOrderByExample(Order order) {
         return adminOrdersDao.selectOrdersByExample(order);
     }
+
+    @Override
+    public void removeOrder(String id) {
+        adminOrdersDao.deleteOrder(id);
+    }
 }

@@ -108,7 +108,7 @@
 									<td align="center" style="HEIGHT: 22px"><c:if
 											test="${order.paystate!=0 }">
 											<a
-												href="${pageContext.request.contextPath}/delOrderById?id=${order.id}&type=admin">
+												href="${pageContext.request.contextPath}/admin/order/removeOrderById?id=${order.id}&type=admin">
 												<img
 												src="${pageContext.request.contextPath}/admin/images/i_del.gif"
 												width="16" height="16" border="0" style="CURSOR: hand">
