@@ -7,4 +7,6 @@ import java.util.List;
 public interface AdminUserService {
     List<User> findUsers();
     User findUserById(Integer id);
+    void addUser(User user);
+    User findUserByUsername(String username);
 }

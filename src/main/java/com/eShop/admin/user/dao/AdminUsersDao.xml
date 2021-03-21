@@ -9,4 +9,11 @@
     <select id="selectUserById" resultType="User">
         select * from user where id=#{id}
     </select>
+    <insert id="insertUser">
+        insert into user (username, password, gender, email, telephone, introduce, activeCode, state, role,registTime)
+        values (#{username},#{password},#{gender},#{email},#{telephone},#{introduce},#{activeCode},#{state},#{role},#{registTime})
+    </insert>
+    <select id="selectUserByUsername" resultType="User">
+        select * from user where username=#{username}
+    </select>
 </mapper>

@@ -1,6 +1,8 @@
 package com.eShop.admin.user.handler;
 
+import com.eShop.admin.login.service.IAdminUserService;
 import com.eShop.admin.user.service.AdminUserService;
+import com.eShop.client.user.service.IUserService;
 import com.eShop.commons.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,5 +31,22 @@ public class AdminUserController {//防止bean重复
         User userById = adminUserService.findUserById(id);
         model.addAttribute("user",userById);
         return "/admin/user/edit.jsp";
+    }
+    /**
+     * 添加用户
+     */
+    @RequestMapping("/addUser")
+    public String addUser(User user,Model model){
+        //判断UserName是否重复
+        User userById = adminUserService.findUserByUsername(user.getUsername());
+        if(userById == null) {
+            adminUserService.addUser(user);
+            return ListUser(model);
+        }
+        else {
+            model.addAttribute("error","用户名重复！");
+            model.addAttribute("user",user);
+            return "/admin/user/add.jsp";
+        }
     }
 }

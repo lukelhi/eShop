@@ -9,4 +9,6 @@ import java.util.List;
 public interface AdminUsersDao {
     List<User> selectUsers();
     User selectUserById(Integer id);
+    void insertUser(User user);
+    User selectUserByUsername(String username);
 }
