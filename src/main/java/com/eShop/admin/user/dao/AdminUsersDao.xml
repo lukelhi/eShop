@@ -16,4 +16,7 @@
     <select id="selectUserByUsername" resultType="User">
         select * from user where username=#{username}
     </select>
+    <delete id="deleteUserById">
+        delete from user where id=#{id}
+    </delete>
 </mapper>

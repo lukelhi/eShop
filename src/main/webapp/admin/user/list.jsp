@@ -74,7 +74,7 @@
                                 </a>
                             </td>
                             <td align="center" style="HEIGHT: 22px" width="7%"><a
-                                    href="${pageContext.request.contextPath}/admin/user/deleteUserById?id=${u.id}">
+                                    href="${pageContext.request.contextPath}/admin/user/removeUserById?id=${u.id}">
                                 <img
                                         src="${pageContext.request.contextPath}/admin/images/i_del.gif"
                                         width="16" height="16" border="0" style="CURSOR: hand">

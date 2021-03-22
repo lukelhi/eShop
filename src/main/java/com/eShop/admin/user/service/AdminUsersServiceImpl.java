@@ -34,4 +34,9 @@ public class AdminUsersServiceImpl implements AdminUserService {
     public User findUserByUsername(String username) {
         return adminUsersDao.selectUserByUsername(username);
     }
+
+    @Override
+    public void removeUserById(String id) {
+        adminUsersDao.deleteUserById(id);
+    }
 }

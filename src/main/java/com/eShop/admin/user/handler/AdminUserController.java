@@ -49,4 +49,12 @@ public class AdminUserController {//防止bean重复
             return "/admin/user/add.jsp";
         }
     }
+    /**
+     * 添加用户
+     */
+    @RequestMapping("/removeUserById")
+    public String removeUserById(String id,Model model){
+        adminUserService.removeUserById(id);
+        return ListUser(model);
+    }
 }
