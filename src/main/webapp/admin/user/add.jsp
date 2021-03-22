@@ -42,8 +42,12 @@
 		</tr>
 		<tr>
 			<td align="center" bgColor="#f5fafe" class="ta_01">性别：</td>
-			<td class="ta_01" bgColor="#ffffff"><input type="text"
-													   name="gender" class="bg" value="${user.gender}" /></td>
+			<td class="ta_01" bgColor="#ffffff">
+				<select name="gender">
+					<option value="男">男</option>
+					<option value="女">女</option>
+				</select>
+			</td>
 		</tr>
 		<tr>
 			<td align="center" bgColor="#f5fafe" class="ta_01">邮箱：</td>
@@ -64,8 +68,12 @@
 		</tr>
 		<tr>
 			<td align="center" bgColor="#f5fafe" class="ta_01">角色：</td>
-			<td class="ta_01" bgColor="#ffffff"><input type="text"
-													   name="role" class="bg" value="${user.role}" /></td>
+			<td class="ta_01" bgColor="#ffffff">
+				<select name="role">
+					<option value="超级管理员">超级管理员</option>
+					<option value="普通用户">普通用户</option>
+				</select>
+			</td>
 		</tr>
 		<TR>
 			<td align="center" colSpan="4" class="sep1"><img
