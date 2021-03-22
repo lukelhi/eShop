@@ -5,9 +5,26 @@
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="${pageContext.request.contextPath}/admin/css/Style.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="${pageContext.request.contextPath}/admin/js/public.js">
-</script>
+	<script language="javascript" src="${pageContext.request.contextPath}/admin/js/public.js"></script>
+	<script language="javascript" src="${pageContext.request.contextPath}/admin/jquery/jquery-1.4.2.js"></script>
 </head>
+<script type="text/javascript">
+	// var myCheck = function(){
+	function myCheck(){
+		var years = $("#inputBox").val();	//获取input框内的值
+		if(years == null || years === ""){
+			alert("请填写年份");	//如果值为空，提示用户填写
+			return;
+		}
+		var months = $("#months").val();
+		// alert(months);
+		if(months === "0"){
+			alert("请选择月份");	//如果值为空，提示用户填写
+			return;
+		}
+		document.getElementById('Form1').submit();
+	};
+</script>
 <body>
 	<br>
 	<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/admin/product/download" method="post">
@@ -28,13 +45,13 @@
 								</td>
 								<td class="ta_01" bgColor="#ffffff">
 									<input type="text" name="year" size="15" value="" 
-									id="Form1_userName" class="bg" />
+									id="inputBox" class="bg" />
 								</td>
 								<td height="22" align="center" bgColor="#f5fafe" class="ta_01">
 									请选择月份
 								</td>
 								<td class="ta_01" bgColor="#ffffff">
-									<select name="month" id="month">
+									<select name="month" id="months">
 										<option value="0">--选择月份--</option>
 										<option value="1">一月</option>
 										<option value="2">二月</option>
@@ -62,8 +79,8 @@
 									<br><br>
 								</td>
 								<td align="center" bgColor="#ffffff" class="ta_01">
-									<input type="submit" id="search" name="search" value="下载"
-									class="button_view"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<%--									<a href="javascript:void(0);" onclick="myCheck()">下载</a>--%>
+									<input type="button" value="下载" class="button_view" onclick="myCheck()">
 									<input type="reset" name="reset" value="重置" class="button_view" />
 								</td>
 							</tr>
