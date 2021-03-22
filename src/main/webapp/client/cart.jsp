@@ -14,12 +14,10 @@
 		//如果数量为0，判断是否要删除商品
 		if (count == 0) {
 			var flag = window.confirm("确认删除商品吗?");
-
 			if (!flag) {
 				count = 1;
 			}
 		}
-
 		if (count > totalCount) {
 			alert("已达到商品最大购买量");
 			count = totalCount;
@@ -101,7 +99,7 @@
 												</tr>
 											</table>
 											<div style="text-align:right; margin-top:10px">
-												<a href="${pageContext.request.contextPath}/showProductByPage">
+												<a href="${pageContext.request.contextPath}/index.jsp">
 													<img src="images/gwc_jx.gif" border="0" />
 												</a>
 												&nbsp;&nbsp;&nbsp;&nbsp;
