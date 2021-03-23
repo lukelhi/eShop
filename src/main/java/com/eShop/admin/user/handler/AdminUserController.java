@@ -57,4 +57,12 @@ public class AdminUserController {//防止bean重复
         adminUserService.removeUserById(id);
         return ListUser(model);
     }
+    /**
+     * 修改用户
+     */
+    @RequestMapping("/editUser")
+    public String editUser(User user,Model model){
+        adminUserService.editUser(user);
+        return ListUser(model);
+    }
 }

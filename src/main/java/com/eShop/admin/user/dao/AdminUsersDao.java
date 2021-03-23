@@ -12,4 +12,5 @@ public interface AdminUsersDao {
     void insertUser(User user);
     User selectUserByUsername(String username);
     void deleteUserById(String id);
+    void updateUserById(User user);
 }

@@ -19,4 +19,32 @@
     <delete id="deleteUserById">
         delete from user where id=#{id}
     </delete>
+    <update id="updateUserById">
+        update user
+        <set>
+            <if test="username != null and username != ''">
+                username=#{username},
+            </if>
+            <if test="password != null and password != ''">
+                password=#{password},
+            </if>
+            <if test="gender != null and gender != ''">
+                gender=#{gender},
+            </if>
+            <if test="email != null and email != ''">
+                email=#{email},
+            </if>
+            <if test="telephone != null and telephone != ''">
+                telephone=#{telephone},
+            </if>
+            <if test="introduce != null and introduce != ''">
+                introduce=#{introduce},
+            </if>
+            state=#{state},
+            <if test="role != null and role != ''">
+                role=#{role},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
 </mapper>

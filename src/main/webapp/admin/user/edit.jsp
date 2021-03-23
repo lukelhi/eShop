@@ -60,16 +60,22 @@
 		</tr>
 		<tr>
 			<td align="center" bgColor="#f5fafe" class="ta_01">状态：</td>
-			<td class="ta_01" bgColor="#ffffff"><input type="text"
-													   name="state" class="bg" value="${user.state}" /></td>
+			<td class="ta_01" bgColor="#ffffff">
+				<select name="state">
+					<option value="1" <c:if test="${user.state == '1'}">selected=selected</c:if>>已激活</option>
+					<option value="0" <c:if test="${user.state == '0'}">selected=selected</c:if>>未激活</option>
+				</select>
+			</td>
 		</tr>
 		<tr>
 			<td align="center" bgColor="#f5fafe" class="ta_01">角色：</td>
-			<td class="ta_01" bgColor="#ffffff"><input type="text"
-													   name="role" class="bg" value="${user.role}" /></td>
+			<td class="ta_01" bgColor="#ffffff">
+				<select name="role">
+					<option value="普通用户" <c:if test="${user.role eq '普通用户'}">selected="ture"</c:if>>普通用户</option>
+					<option value="超级管理员" <c:if test="${user.role eq '超级管理员'}">selected="true"</c:if>>超级管理员</option>
+				</select>
+			</td>
 		</tr>
-
-
 		<TR>
 			<td align="center" colSpan="4" class="sep1"><img
 					src="${pageContext.request.contextPath}/admin/images/shim.gif">

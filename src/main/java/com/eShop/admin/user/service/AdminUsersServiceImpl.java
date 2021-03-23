@@ -39,4 +39,9 @@ public class AdminUsersServiceImpl implements AdminUserService {
     public void removeUserById(String id) {
         adminUsersDao.deleteUserById(id);
     }
+
+    @Override
+    public void editUser(User user) {
+        adminUsersDao.updateUserById(user);
+    }
 }

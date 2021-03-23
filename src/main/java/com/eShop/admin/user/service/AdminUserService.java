@@ -10,4 +10,5 @@ public interface AdminUserService {
     void addUser(User user);
     User findUserByUsername(String username);
     void removeUserById(String id);
+    void editUser(User user);
 }
