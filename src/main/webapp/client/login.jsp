@@ -86,7 +86,7 @@
 											</div></td>
 										<td style="text-align:left; padding-top:30px; width:60%"><h1>您还没有注册？</h1>
 											<p>注册新会员，享受更优惠价格!</p>
-											<p>千种商品，供你挑选！注册即享受丰富折扣和优惠，便宜有好货！超过万本商品任您选。</p>
+											<p>千种商品，供你挑选！注册即享受丰富折扣和优惠，便宜有好货！超过万个商品任您选。</p>
 											<p>超人气社区！精彩活动每一天。买卖更安心！支付宝交易超安全。</p>
 											<p style="text-align:left">
 												<a href="${pageContext.request.contextPath }/client/register.jsp">
