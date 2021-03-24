@@ -5,10 +5,11 @@ import com.eShop.commons.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 @Service
 public class AdminUserServiceImpl implements IAdminUserService{
-    @Autowired
+    @Resource
     AdminUserDao adminUserDao;
     @Override
     public User findUserByLogin(User user) {

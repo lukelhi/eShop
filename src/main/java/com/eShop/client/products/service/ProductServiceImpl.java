@@ -8,10 +8,11 @@ import com.eShop.utils.PageModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService {
-    @Autowired
+    @Resource
     ProductDao productDao;
     IUserDao userDao;
     @Override

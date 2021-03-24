@@ -9,15 +9,16 @@ import com.eShop.utils.MailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements IUserService {
-    @Autowired
+    @Resource
     IUserDao userDao;
-    @Autowired
+    @Resource
     OrderDao orderDao;
     @Override
     public int addUser(User user, HttpServletRequest request) {//加入request参数
