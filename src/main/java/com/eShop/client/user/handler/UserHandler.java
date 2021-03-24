@@ -143,6 +143,8 @@ public class UserHandler {
      */
     public void addCookie(String autoLogin, User user, HttpServletRequest request, HttpServletResponse response){
 
+        //记住用户名的代码
+
         //定义User对象
         Cookie cookie1 = new Cookie("eShop_username",user.getUsername());
         //设置保存时间
@@ -151,6 +153,8 @@ public class UserHandler {
         cookie1.setPath(request.getContextPath()+"/");
         //响应
         response.addCookie(cookie1);
+
+        //如果autoLogin为1，需要记住密码
         //判断是否需要保存密码
         if("1".equals(autoLogin)){
             Cookie cookie2 = new Cookie("eShop_password",user.getPassword());
