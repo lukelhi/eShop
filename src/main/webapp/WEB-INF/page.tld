@@ -12,9 +12,9 @@
   <!-- 版本号 -->
   <tlib-version>1.0</tlib-version>
   <!-- 短名 -->
-  <short-name>yyf</short-name>
+  <short-name>lhi</short-name>
   <!-- uri ：导包 -->
-  <uri>http://yyf.pager-tags</uri>
+  <uri>http://lhi.pager-tags</uri>
   
   <!-- 定义一个标签 -->
   <tag>
