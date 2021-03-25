@@ -17,7 +17,7 @@ public class CartHandler {
     ProductService productService;
     @RequestMapping("/addCart")
     public String addCart(String id, HttpSession session){
-        //使用session存储购物车的内容，存储类型的map
+        //使用session存储购物车的内容，存储类型为map
         //map中键为商品名称，值为购买数量
         /**
          * 查询商品信息

@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- <p:user /> -->
 	<!-- 确认支付form -->
 	<form action="${pageContext.request.contextPath}/client/order/pay" method="post">
 		<h3>订单号：${order.id},付款金额 ：${order.money }</h3>

@@ -35,7 +35,6 @@ public class OrderHandler {
     OrderService orderService;
     @RequestMapping("/createOrder")
     public String createOrder(Order order, HttpSession session, Model model){
-        //System.err.println(order);
         order.setId(IdUtils.getUUID());
         //此处应该加判断，如果用户没有登录不能购买
         User user = (User) session.getAttribute("login_user");
