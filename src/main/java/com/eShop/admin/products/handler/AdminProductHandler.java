@@ -121,7 +121,9 @@ public class AdminProductHandler {
             System.err.println(p);
         }*/
         String filename = year + "年"+month+"月销售榜单";
+        //工作表名称
         String sheetName = month + "月销售榜单";
+        //标题名称
         String titleName = year + "年" + month +"月销售榜单";
         String [] columnName = {"商品名称","商品销量"};
 
@@ -131,10 +133,12 @@ public class AdminProductHandler {
             dataList[i][1] = pList.get(i).getSalNum();
         }
 
+        //工作簿中新建一个工作表
         HSSFWorkbook wb = new HSSFWorkbook();//创建excel文件
         HSSFSheet sheet = wb.createSheet();//创建excel中的表
         HSSFRow row1 = sheet.createRow(0);
         HSSFCell cell = row1.createCell(0);//创建第一行的第一个单元格
+        //合并第一行的两个单元格
         sheet.addMergedRegion(new CellRangeAddress(0,0,0,1));
         cell.setCellValue(titleName);//给合并后的第一行的第一个表格赋值
         //创建第二行
