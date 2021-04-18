@@ -33,18 +33,6 @@
 
 								<table cellspacing="0" class="booklist">
 									<tr>
-<%--											<td>
-												<div class="divbookpic">
-													<p>
-														<a href="#">
-															<img src="${pageContext.request.contextPath}/bookcover/101.jpg" width="115" height="129" border="0" /> 
-														</a>
-													</p>
-												</div>
-												<div class="divlisttitle">
-													<a href="${pageContext.request.contextPath}/findProductById?id=${p.id}">书名：时空穿行 <br />售价：￥38.8 </a>
-												</div>
-											</td>--%>
 										<c:forEach items="${products}" var="p" varStatus="vs">
 											<td>
 												<div class="divbookpic">
@@ -55,7 +43,7 @@
 													</p>
 												</div>
 												<div class="divlisttitle">
-													<a href="${pageContext.request.contextPath}/client/product/findProductById?id=${p.id}">书名： ${p.name}<br />售价：￥${p.price} </a>
+													<a href="${pageContext.request.contextPath}/client/product/findProductById?id=${p.id}">商品名： ${p.name}<br />售价：￥${p.price} </a>
 												</div>
 											</td>
 

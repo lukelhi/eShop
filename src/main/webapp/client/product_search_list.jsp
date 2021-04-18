@@ -24,7 +24,7 @@
 							<td>
 								<h1>商品目录</h1>
 								<hr />
-								<h1>全部商品</h1>&nbsp;&nbsp;&nbsp;&nbsp;共${bean.totalCount}种商品
+								<h1>全部商品</h1>&nbsp;&nbsp;&nbsp;&nbsp;共${pageModel.recordCount}种商品
 								<hr />
 								<div style="margin-top:20px; margin-bottom:5px">
 									<img src="${pageContext.request.contextPath}/client/images/productlist.gif" width="100%" height="38" />
@@ -42,7 +42,7 @@
 													</p>
 												</div>
 												<div class="divlisttitle">
-													<a href="${pageContext.request.contextPath}/client/product/findProductById?id=${p.id}">书名： ${p.name}<br />售价：￥${p.price} </a>
+													<a href="${pageContext.request.contextPath}/client/product/findProductById?id=${p.id}">商品名： ${p.name}<br />售价：￥${p.price} </a>
 												</div>
 											</td>
 											<%-- <c:if test="${vs.count%4==0}">

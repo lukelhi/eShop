@@ -52,7 +52,7 @@ public class AdminProductHandler {
     @RequestMapping("/addProduct")
     public String addProduct(Product product, MultipartFile upload, HttpSession session) throws IOException {
         String path = session.getServletContext().getRealPath("/productImg");
-        String path1 = "D:\\eShop\\src\\main\\webapp\\productImg";//在项目目录下面也保存一份文件
+        String path1 = "E:\\GithubRep\\eShop\\src\\main\\webapp\\productImg";//在项目目录下面也保存一份文件
         System.err.println("路径"+path);
 
         File file = new File(path);
@@ -107,7 +107,7 @@ public class AdminProductHandler {
     public String removeProduct(String id,HttpSession session){
         Product target = adminProductService.findProductById(id);
         File targetFile = new File(session.getServletContext().getRealPath("/")+target.getImgurl());//找到目标文件
-
+        //session.getServletContext().getRealPath("/") 路径是tomcat\webapps\eshop_war 如果重启之后就不能找到了
         if(targetFile.exists()){
             targetFile.delete();
         }
