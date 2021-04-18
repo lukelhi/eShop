@@ -20,11 +20,11 @@
 	<div id="box_autoplay">
     	<div class="list">
         	<ul>
-            	<li><img src="${pageContext.request.contextPath }/client/ad/index_ad1.jpg" width="900" height="335" /></li>
-            	<li><img src="${pageContext.request.contextPath }/client/ad/index_ad2.jpg" width="900" height="335" /></li>
-            	<li><img src="${pageContext.request.contextPath }/client/ad/index_ad3.jpg" width="900" height="335" /></li>
-            	<li><img src="${pageContext.request.contextPath }/client/ad/index_ad4.jpg" width="900" height="335" /></li>
-            	<li><img src="${pageContext.request.contextPath }/client/ad/index_ad5.jpg" width="900" height="335" /></li>
+            	<li><a href="${pageContext.request.contextPath}/client/product/findProductById?id=857a6c8e-24c5-4e79-a5b9-ba0a4939288a"><img src="${pageContext.request.contextPath }/client/ad/index_ad1.jpg" width="900" height="335" /></a></li>
+            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad2.jpg" width="900" height="335" /></a></li>
+            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad3.jpg" width="900" height="335" /></a></li>
+            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad4.jpg" width="900" height="335" /></a></li>
+            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad5.jpg" width="900" height="335" /></a></li>
         	</ul>
     	</div>
 	</div>
@@ -52,7 +52,7 @@
 					<table width="100%" border="0" cellspacing="0">
 						<tr>
 						<c:forEach items="${pList }" var="pArray">
-							<td style="width:80; text-align:center">
+							<td style="width:80px; text-align:center">
 								<a href="${pageContext.request.contextPath}/client/product/findProductById?id=${pArray.id}">
 									<img src="${pageContext.request.contextPath }${pArray.imgurl}" width="102" height="130" border="0" />
 								</a>
