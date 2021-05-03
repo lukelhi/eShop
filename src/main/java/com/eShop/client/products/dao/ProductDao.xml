@@ -52,6 +52,6 @@
         and products.id = orderitem.product_id
         group by products.id
         order by totalnum desc
-        limit 0,2
+        limit 0,3
     </select>
 </mapper>
