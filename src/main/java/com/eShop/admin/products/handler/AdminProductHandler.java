@@ -53,7 +53,7 @@ public class AdminProductHandler {
     public String addProduct(Product product, MultipartFile upload, HttpSession session) throws IOException {
         String path = session.getServletContext().getRealPath("/productImg");
         String path1 = "E:\\GithubRep\\eShop\\src\\main\\webapp\\productImg";//在项目目录下面也保存一份文件
-        System.err.println("路径"+path);
+        //System.err.println("路径"+path);
 
         File file = new File(path);
         if(!file.exists()){

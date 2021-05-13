@@ -46,9 +46,6 @@
 													<a href="${pageContext.request.contextPath}/client/product/findProductById?id=${p.id}">商品名： ${p.name}<br />售价：￥${p.price} </a>
 												</div>
 											</td>
-
-											<%-- <c:if test="${vs.count%4==0}">
-											</c:if> --%>
 										</c:forEach>
 									</tr>
 								</table>
@@ -58,35 +55,6 @@
 								</table> -->
 
 								<div class="pagination">
-<%--									<ul>
-										<c:if test="${bean.currentPage!=1}">
-											<li class="nextPage">
-												<a href="${pageContext.request.contextPath}/showProductByPage?currentPage=${bean.currentPage-1}&category=${bean.category}">&lt;&lt;上一页</a>
-											</li>
-										</c:if>
-										<c:if test="${bean.currentPage==1}">
-											<li class="disablepage">&lt;&lt;上一页</li>
-										</c:if>
-										<c:forEach begin="1" end="${bean.totalPage}" var="pageNum">
-											<c:if test="${pageNum==bean.currentPage}">
-												<li class="currentpage">${pageNum }</li>
-											</c:if>
-											<c:if test="${pageNum!=bean.currentPage}">
-												<li><a href="${pageContext.request.contextPath}/showProductByPage?currentPage=${pageNum}&category=${bean.category}">${pageNum}</a>
-												</li>
-											</c:if>
-										</c:forEach>
-
-										<c:if test="${bean.currentPage==bean.totalPage||bean.totalPage==0}">
-											<li class="disablepage">下一页 &gt;&gt;</li>
-										</c:if>
-										<c:if test="${bean.currentPage!=bean.totalPage&&bean.totalPage!=0}">
-											<li class="nextpage">
-												<a href="${pageContext.request.contextPath}/showProductByPage?currentPage=${bean.currentPage+1}&category=${bean.category}">下一页
-													&gt;&gt;</a>
-											</li>
-										</c:if>
-									</ul>--%>
 									<lhi:pager pageIndex="${pageModel.pageIndex}"
 											   pageSize="${pageModel.pageSize}"
 											   recordCount="${pageModel.recordCount}"

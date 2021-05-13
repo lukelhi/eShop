@@ -21,10 +21,10 @@
     	<div class="list">
         	<ul>
             	<li><a href="${pageContext.request.contextPath}/client/product/findProductById?id=857a6c8e-24c5-4e79-a5b9-ba0a4939288a"><img src="${pageContext.request.contextPath }/client/ad/index_ad1.jpg" width="900" height="335" /></a></li>
-            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad2.jpg" width="900" height="335" /></a></li>
-            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad3.jpg" width="900" height="335" /></a></li>
-            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad4.jpg" width="900" height="335" /></a></li>
-            	<li><a href=""><img src="${pageContext.request.contextPath }/client/ad/index_ad5.jpg" width="900" height="335" /></a></li>
+            	<li><a href="${pageContext.request.contextPath}/client/product/findProductById?id=4723382e-0e2d-49e5-8096-18a1f9e17c80"><img src="${pageContext.request.contextPath }/client/ad/index_ad2.jpg" width="900" height="335" /></a></li>
+            	<li><a href="${pageContext.request.contextPath}/client/product/findProductById?id=eaae7265-91b7-45e1-a3dc-776d83d664e2"><img src="${pageContext.request.contextPath }/client/ad/index_ad3.jpg" width="900" height="335" /></a></li>
+            	<li><a href="${pageContext.request.contextPath}/client/product/findProductById?id=6c4f5322-5845-4556-806d-a17fcb51bf33"><img src="${pageContext.request.contextPath }/client/ad/index_ad4.jpg" width="900" height="335" /></a></li>
+            	<li><a href="${pageContext.request.contextPath}/client/product/findProductById?id=596a0354-5c92-4d96-970e-864680cc93db"><img src="${pageContext.request.contextPath }/client/ad/index_ad5.jpg" width="900" height="335" /></a></li>
         	</ul>
     	</div>
 	</div>
