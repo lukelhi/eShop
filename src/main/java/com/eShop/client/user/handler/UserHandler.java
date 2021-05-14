@@ -39,7 +39,7 @@ public class UserHandler {
         }else{
             request.setAttribute("check_error","校验码错误，请重新输入");
             return "/client/register.jsp";
-            //加上redirect后域对象中的提示信息就不显示了；到前台讲图片位置改为绝对路径，保证图片显示；
+            //加上redirect后域对象中的提示信息就不显示了；到前台图片位置改为绝对路径，保证图片显示；
         }
     }
     @RequestMapping("/activeUser")
